@@ -56,7 +56,7 @@
         /* border: 2px solid red; */
         position: relative;
         bottom: 29px;
-       left: 37px;
+       left: 44px;
        font-size: 25px;
        align-items: center;
     }
@@ -133,7 +133,7 @@
     z-index: 3;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.3rem;
     width: 30px;
     cursor: pointer;
 }
