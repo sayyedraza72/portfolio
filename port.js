@@ -1,5 +1,3 @@
-
-
 var changeul = document.getElementById("list")
 var btn = document.getElementById("dropdown")
 console.log(btn)
@@ -32,106 +30,133 @@ btn.addEventListener("click", function (e) {
 })
 
 
-       
-     
 
 
-var front =document.getElementById("Mumbai");
+
+var front = document.getElementById("Mumbai");
 var front1 = document.getElementById("Aptech");
 var frontdata = document.getElementById("edu_time")
 var frontdata2 = document.getElementById("edu_time1")
-front1.addEventListener("click",function(e){
+front1.addEventListener("click", function (e) {
     e.preventDefault();
-   
-   
+
+
     console.log(frontdata)
     console.log(front1)
-        
-        frontdata.style.display="none";
-        frontdata2.style.display="block"
-        front.style.background="none"
-        front1.style.background = "linear-gradient(hsla(7,100%,78%,0),hsl(342.81deg 90.1% 33.08%),hsla(7,100%,78%,.51))";
+
+    frontdata.style.display = "none";
+    frontdata2.style.display = "block"
+    front.style.background = "none"
+    front1.style.background = "linear-gradient(hsla(7,100%,78%,0),hsl(342.81deg 90.1% 33.08%),hsla(7,100%,78%,.51))";
 })
-front.addEventListener("click",function(e){
+front.addEventListener("click", function (e) {
     e.preventDefault();
     console.log(frontdata)
     console.log(front1)
-        
-        frontdata2.style.display="none";
-        frontdata.style.display="block";
-        front1.style.background="none";
-        front.style.background="linear-gradient(hsla(7,100%,78%,0),hsl(342.81deg 90.1% 33.08%),hsla(7,100%,78%,.51))";
+
+    frontdata2.style.display = "none";
+    frontdata.style.display = "block";
+    front1.style.background = "none";
+    front.style.background = "linear-gradient(hsla(7,100%,78%,0),hsl(342.81deg 90.1% 33.08%),hsla(7,100%,78%,.51))";
 })
 
 
-    var skills = document.getElementsByClassName("skilled");
-    console.log(skills)
-    // console.log(skill.length)
-    Array.from(skills).forEach(function(skill){
-        skill.addEventListener('click', function(e){
-            // e.preventDefault()
-            console.log(skill)
-            var circle = e.target.parentElement.childNodes[1].childNodes[1];
-            console.log(circle)
-            var text = e.target.textContent;
-            // console.log(text)
-            // var text=this.firstChild.nextSibling.nodeValue;
-            // console.log(text)
-            var html = document.getElementById("skill_html")
-            var css = document.getElementById("skill_css")
-            var javascript = document.getElementById("skill_javascript")
-            var bootstrap = document.getElementById("skill_bootstrap")
-            var python = document.getElementById("skill_python")
-            // circle.style.background=""
+var skills = document.querySelectorAll(".skilled");
+console.log(skills)
+var html = document.getElementById("skill_html")
+var css = document.getElementById("skill_css")
+var javascript = document.getElementById("skill_javascript")
+var bootstrap = document.getElementById("skill_bootstrap")
+var python = document.getElementById("skill_python")
+skills.forEach(function(skill){ 
+    console.log(skill)
+   
+   
+    skill.addEventListener("click",function(e){
+        e.preventDefault()
+        var text1 = e.target.textContent;
+        console.log(text1)
+        var circle1 = document.querySelectorAll(".skill_circle")
+        Array.from(circle1).forEach(function(circle){
+        // console.log(circle);
+        console.log(circle1)
+        if(text1 == "HTML"){
+           
+           
+            circle1[0].style.backgroundColor= "#1e847f";
+            html.style.display = "block";
+            css.style.display = "none";
+            python.style.display = "none"
+            javascript.style.display = "none"
+            bootstrap.style.display = "none"
+            circle1[2].style.backgroundColor= "#fff"
+            circle1[3].style.backgroundColor= "#fff"
+            circle1[4].style.backgroundColor= "#fff"
+            circle1[1].style.backgroundColor= "#fff"
+        }
+        else if (text1 == "CSS"){
+           
+            circle1[1].style.backgroundColor= "#1e847f"
+            css.style.display = "block";
+            html.style.display = "none";
+            python.style.display = "none";
+            javascript.style.display = "none"
+            bootstrap.style.display = "none"
+            circle1[2].style.backgroundColor= "#fff"
+            circle1[3].style.backgroundColor= "#fff"
+            circle1[4].style.backgroundColor= "#fff"
+            circle1[0].style.backgroundColor= "#fff";
+           
             
-        if(text == 'CSS'){
-            circle.style.background="#1e847f"
-            css.style.display="block";
-            html.style.display="none";
-            python.style.display="none";
-            javascript.style.display="none"
-            bootstrap.style.display="none"
-                
         }
-        else if (text=='HTML'){
-            circle.style.background="#1e847f"
-            html.style.display="block";
-            css.style.display="none";
-            python.style.display="none"
-            javascript.style.display="none"
-            bootstrap.style.display="none"
+        else if (text1 == "JavaScript"){
+           
+            circle1[3].style.backgroundColor= "#1e847f"
+            circle1[2].style.backgroundColor= "#fff"
+            circle1[1].style.backgroundColor= "#fff"
+            circle1[4].style.backgroundColor= "#fff"
+            circle1[0].style.backgroundColor= "#fff";
+            javascript.style.display = "block"
+            html.style.display = "none";
+            css.style.display = "none";
+            bootstrap.style.display = "none"
+            python.style.display = "none"
+            circle1[1].style.backgroundColor= "#fff"
         }
-        else if(text == 'JavaScript'){
-            circle.style.background="#1e847f"
-            console.log("hello")
-            javascript.style.display="block"
-            html.style.display="none";
-            css.style.display="none";
-            bootstrap.style.display="none"
-            python.style.display="none"
+        else if (text1 == "Bootstrap"){
+            
+            
+            circle1[2].style.backgroundColor= "#1e847f"
+            circle1[3].style.backgroundColor= "#fff"
+            circle1[1].style.backgroundColor= "#fff"
+            circle1[4].style.backgroundColor= "#fff"
+            circle1[0].style.backgroundColor= "#fff";
+            bootstrap.style.display = "block"
+            html.style.display = "none";
+            css.style.display = "none";
+            javascript.style.display = "none"
+            python.style.display = "none"
         }
-        else if(text == 'Bootstrap'){
-            circle.style.background="#1e847f"
-            bootstrap.style.display="block"
-            html.style.display="none";
-            css.style.display="none";
-            javascript.style.display="none"
-            python.style.display="none"
+        else if (text1 == "Python") {
+            circle1[2].style.backgroundColor= "#fff"
+            circle1[3].style.backgroundColor= "#fff"
+            circle1[1].style.backgroundColor= "#fff"
+            circle1[0].style.backgroundColor= "#fff";
+            
+        circle1[4].style.backgroundColor= "#1e847f"
+        python.style.display = "block"
+        html.style.display = "none";
+        css.style.display = "none";
+        javascript.style.display = "none"
+        bootstrap.style.display = "none"
         }
-        else if(text == "Python"){
-            circle.style.background="#1e847f"
-            python.style.display="block"
-            html.style.display="none";
-            css.style.display="none";
-            javascript.style.display="none"
-            bootstrap.style.display="none"
-        }
+        
         else{
-            circle.style.background="none"
+            circle.style.backgroundColor="#fff";
         }
-    
-        })
-    
     })
 
-   
+    })
+    
+})
+
