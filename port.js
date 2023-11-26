@@ -1,8 +1,11 @@
+
+
+
 var changeul = document.getElementById("list")
 var btn = document.getElementById("dropdown")
 console.log(btn)
 
-btn.addEventListener("click", function (e) {
+btn.addEventListener("click",function(e){
 
     var dropChild1 = btn.childNodes[1];
     var dropChild2 = btn.childNodes[3];
