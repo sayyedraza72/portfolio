@@ -16,18 +16,18 @@
 }
 
 .left_side_text1 {
-    animation: fadeIn 4s cubic-bezier(.39, -1.05, .58, 1.95);
+    animation: fadeIn 1.5s cubic-bezier(.39, -1.05, .58, 1.95);
     animation-delay: -0.2s;
     transform-origin: left right;
 }
 
 .left_side_text2 {
-    animation: fadeIn 6s cubic-bezier(.39, -1.05, .58, 1.95);
+    animation: fadeIn 2.5s cubic-bezier(.39, -1.05, .58, 1.95);
     transform-origin: center bottom;
 }
 
 .left_side_text3 {
-    animation: fadeIn 8s cubic-bezier(.39, -1.05, .58, 1.95);
+    animation: fadeIn 4s cubic-bezier(.39, -1.05, .58, 1.95);
     transform-origin: center bottom;
 }
 
